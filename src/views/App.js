@@ -25,23 +25,22 @@ import {
 function App() {
   // const  App = () =>  {
   return (
-    <BrowserRouter>
+    <BrowserRouter>{/*push and replace state ,sync ui with url */}
       <div className="App">
         <header className="App-header">
           <Nav />
           <img src={logo} className="App-logo" alt="logo" />
-          <Switch>{/**https://v5.reactrouter.com/web/api/Switch giai thich cach dung switch noi chung dung switch de khi ta nhan vao duong link nao no se hien ra chinh xac component, con neu ko dung thi no se render tat ca cac component */}
+          <Switch>{/**gom nhom cac route dambao tai 1 thoi diem chi render duy nhat 1 component dau tien co url hien tai trung voi path prop cua Route */}
             <Route path="/" exact>
               <Home />
             </Route>
             {/**truy cap vao duong link /todo thi no se ra ListTodo component */}
             <Route path="/todo">
               <ListTodo />
-            </Route>
+            </Route> 
             <Route path="/about">
               <MyComponent />
             </Route>
-
             <Route path="/user" exact>{/**exact de phan biet cac duong lin gan giong nhau nhu /user vs /user/:id */}
               <ListUser />
             </Route>
@@ -54,7 +53,7 @@ function App() {
 
         </header>
 
-
+{/**https://www.npmjs.com/package/react-toastify */}
         <ToastContainer
           position="top-right"
           autoClose={5000}

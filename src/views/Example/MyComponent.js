@@ -21,7 +21,7 @@ class MyComponent extends React.Component {
         // currenJobs.push(job)
 
         this.setState({
-            arrJobs: [...this.state.arrJobs, job]
+            arrJobs: [...this.state.arrJobs, job]//copy va them moi
             // arrJobs: currenJobs
         })
 
@@ -35,12 +35,12 @@ class MyComponent extends React.Component {
         })
     }
 
-    componentDidUpdate(prevProps, prevState) {
-        console.log('>> run didupdate: ', 'prev state: ', prevState, ' current state: ', this.state)
-    }
-    componentDidMount() {
-        console.log('>>> run component did mount')
-    }
+    // componentDidUpdate(prevProps, prevState) {
+    //     console.log('>> run didupdate: ', 'prev state: ', prevState, ' current state: ', this.state)
+    // }
+    // componentDidMount() {
+    //     console.log('>>> run component did mount')
+    // }
 
     /* 
     JSX => return block

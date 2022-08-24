@@ -23,7 +23,7 @@ class Home extends React.Component {
         this.props.addUserRedux();
     }
     render() {
-        console.log('>>> check props redux ', this.props.dataRedux)//this.props.dataRedux ko he truyen tu cha xuong ma truyen qua prop cua react thong qua redux
+        console.log('>>> check props redux ', this.props.dataRedux)// dataRedux: state.users trong ham mapStateToProps phia duoi 
         let listUsers = this.props.dataRedux;
 
         return (
@@ -57,17 +57,17 @@ class Home extends React.Component {
 
 // export default withRouter(Home);
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => {//map data state from redux to props (component react)  
     return {
         dataRedux: state.users//lay users trong rootReducer.js
     }
 }
 
-const mapDispatchToProps = (dispatch) => {//redux cung cap mapDispatchToProps goi ten action cua react  
+const mapDispatchToProps = (dispatch) => {//file Redux actions with React's props; dispatch keyword của redux 
     return {
         deleteUserRedux: (userDelete) => dispatch({ type: 'DELETE_USER', payload: userDelete }),//payload chinh la dau vao cua deleteUserRedux, type chinh la action -> rootReducer.js
         addUserRedux: () => dispatch({ type: 'CREATE_USER' }),//tao user ko can truyen du lieu nen ko can payload
-    }
+    }//-> rootReducer.js
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Color(Home));//connect giup react ket noi voi redux va chi bat tay trong component Home

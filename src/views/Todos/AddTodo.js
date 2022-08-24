@@ -25,6 +25,7 @@ class AddTodo extends React.Component {
             title: this.state.title
         }
 
+        //sau khi add thi tra ve o input trong va title rong
         this.props.addNewTodo(todo);
         this.setState({
             title: ''

@@ -19,7 +19,7 @@ class ChildComponent extends React.Component {
     }
 
     render() {
-        let { arrJobs } = this.props;
+        let { arrJobs } = this.props;//props data truyen tu cha sang con
         let { showJobs } = this.state;
         let check = showJobs === true ? 'showJobs = true' : 'showJobs = false';
         console.log('>>> check conditional: ', check)

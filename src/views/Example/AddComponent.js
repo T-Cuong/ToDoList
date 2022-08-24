@@ -30,7 +30,8 @@ class AddComponent extends React.Component {
             title: this.state.title,
             salary: this.state.salary
         })
-
+        
+        //sau khi them tra ve title va salary rong 
         this.setState({
             title: '',
             salary: ''

@@ -38,7 +38,7 @@ class ListTodo extends React.Component {
     handleEditTodo = (todo) => {
         let { editTodo, listTodos } = this.state;
 
-        let isEmptyObj = Object.keys(editTodo).length === 0;
+        let isEmptyObj = Object.keys(editTodo).length === 0;//Object.keys(editTodo)chuyen thanh mang roi kiem tra do dai
 
         //save
         if (isEmptyObj === false && editTodo.id === todo.id) {
@@ -80,9 +80,6 @@ class ListTodo extends React.Component {
         console.log('>>> check empty object: ', isEmptyObj)
         return (
             <>
-                <p>
-                    Simple TODO Apps with React.js (Eric &amp; Hoi Dan IT)
-                </p>
                 <div className="list-todo-container">
                     <AddTodo
                         addNewTodo={this.addNewTodo}
